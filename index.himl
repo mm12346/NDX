@@ -126,7 +126,7 @@
         }
         
         // --- CONFIGURATION ---
-        const BACKEND_URL = 'https://script.google.com/macros/s/AKfycbyFI6zP3B2sghH5yofM25jyEKCtMoGOwOzthv8x8KPMEE7L8cH0JI42sDEXW91-1HI0yw/exec';
+        const BACKEND_URL = 'https://script.google.com/macros/s/AKfycbyOMIyMsBxoYpDOG6WCUCkIJSmPO_3sc7mj7ZGRDr-pmKcHb6pvh1cFCuYY2cEo-9NzoA/exec';
 
         // --- GLOBAL STATE ---
         const appState = {

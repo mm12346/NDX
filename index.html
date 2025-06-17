@@ -479,7 +479,7 @@
         }
 
         // --- Exchange Rate API ---
-        const EXCHANGE_RATE_API_URL = `https://v6.exchangerate-api.com/v6/2b50f0188f18dbe19a515559/latest/USD`;
+        const EXCHANGE_RATE_API_URL = `https://v6.exchangerate-api.com/v6/5f1240e7524204cd9b79dbfd/latest/USD`;
         const DAILY_LIMIT = 32;
 
         function checkApiLimit() {
@@ -512,7 +512,9 @@
             DOM.fetchRateBtn.disabled = true;
 
             try {
-                const response = await fetch(EXCHANGE_RATE_API_URL);
+                // *** FIX: Added { cache: 'no-store' } to prevent the browser from using a cached response.
+                // This ensures that the latest exchange rate is fetched every time.
+                const response = await fetch(EXCHANGE_RATE_API_URL, { cache: 'no-store' });
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
                 
